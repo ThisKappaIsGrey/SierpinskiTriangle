@@ -1,5 +1,6 @@
 int len = 500;
 int size = 500;
+int count = 0;
 public void setup()
 {
 	size(500, 500);
@@ -12,6 +13,7 @@ public void draw()
 
 }
 public void mousePressed(){
+  count++;
   size /= 2;
   background(0);
   sierpinski(0, 500, len);

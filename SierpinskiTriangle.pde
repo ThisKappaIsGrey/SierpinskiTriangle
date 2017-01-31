@@ -14,9 +14,15 @@ public void draw()
 }
 public void mousePressed(){
   count++;
+  if(count < 7){
   size /= 2;
   background(0);
   sierpinski(0, 500, len);
+  }else{
+    count = 0;
+    size = 500;
+    sierpinski(0, 500, len);
+  }
 }
 public void sierpinski(int x, int y, int len)
 {

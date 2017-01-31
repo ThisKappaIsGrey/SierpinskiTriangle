@@ -1,5 +1,5 @@
 int len = 500;
-int size = 500;
+int siz = 500;
 int count = 0;
 public void setup()
 {
@@ -15,18 +15,18 @@ public void draw()
 public void mousePressed(){
   count++;
   if(count < 7){
-  size /= 2;
+  siz /= 2;
   background(0);
   sierpinski(0, 500, len);
   }else{
     count = 0;
-    size = 500;
+    siz = 500;
     sierpinski(0, 500, len);
   }
 }
 public void sierpinski(int x, int y, int len)
 {
-if(len <= size){
+if(len <= siz){
 	triangle(x, y, x+len/2, y-len, x+len, y);
 }else{
   fill((float)(Math.random() * 255), (float)(Math.random() * 255), (float)(Math.random() * 255));
